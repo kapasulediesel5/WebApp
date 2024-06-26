@@ -6,7 +6,6 @@ Use composer install in the terminal to install project dependencies.
 Start Development Server:
 
 Run php artisan serve to start the PHP development server.
-Setup Database (if needed):
 
 Import schema.sql into your database management.
 
