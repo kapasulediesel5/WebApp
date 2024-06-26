@@ -15,4 +15,4 @@ Access Website:
 Navigate to http://localhost:8000 or the server's address.
 Login:
 
-Go to /login and use admin@gmail.com with password 123456789
+Go to /login and use admin@gmail.com with password 1234567890
