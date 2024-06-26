@@ -1,0 +1,418 @@
+/* public/css/styles.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container-fluid {
+    height: 100%;
+    background-color: #155bd5;
+    padding-top: 10px; /* Adds space between the navbar and the next section */
+}
+
+.light-rounded-button{
+    background-color: white;
+    color: black;
+    border-color: transparent;
+}
+
+.rounded-play-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 24px;
+    color: white;
+}
+
+.rounded-play-btn:hover {
+    background-color: #0056b3;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+    border-radius: 20px; /* Adjust the radius to change the roundness */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: blue;
+    color: white;
+}
+
+.button:hover {
+    background-color: blue;
+    color: white;
+}
+
+.container {
+    padding-top: 20px;
+}
+
+.navbar.bg-transparent {
+    background-color: transparent !important;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white !important; /* Make navbar links white */
+}
+
+.navbar .navbar-nav .nav-link.active {
+    color: white !important; /* Make active navbar link white */
+}
+
+.section1 {
+    color: white;
+    margin-top: 40px;
+    text-align-all: center;
+    padding-bottom: 100px;
+}
+
+.homeHeading {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.section2 {
+    background-color: gray;
+}
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.tabContent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+service-container {
+    background-color: #F2F8FF;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.service-container .icon {
+    margin-top: 5%;
+    font-size: 38px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.service-container .number-icon .icon-2 {
+    height: 70px;
+    width: 70px;
+    line-height: 80px;
+    border-radius: 64% 36% 55% 45% / 76% 72% 28% 24% !important;
+    border-color: #f89d36 !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.service-container .number-icon .icon-2 i {
+    font-size: 30px;
+}
+
+.service-container .number-icon .number {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    left: 0;
+    height: 35px;
+    width: 35px;
+    margin: 0 auto;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.service-container .number-icon .number span {
+    line-height: 30px;
+}
+
+.service-container .content .number {
+    font-size: 40px;
+    color: #dee2e6;
+}
+
+
+.service-container .content .title {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.service-container.hover-bg {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.service-container.hover-bg .smooth-icon {
+    position: absolute;
+    bottom: -40px;
+    right: -20px;
+    font-size: 60px;
+    color: #f8f9fa;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+
+.service-container.hover-bg:hover {
+    background-color: #f89d36;
+}
+
+.service-container.hover-bg:hover .content .title {
+    color: #ffffff !important;
+}
+
+.service-container.hover-bg:hover .content .serv-pera {
+    color: #fafafb !important;
+}
+
+.service-container.hover-bg:hover .smooth-icon {
+    font-size: 100px;
+    opacity: 0.2;
+    bottom: -20px;
+    right: 10px;
+}
+
+.service-container:hover {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+    box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+}
+
+.service-container:hover .icon {
+    color: #f89d36;
+    -webkit-animation: mover 1s infinite alternate;
+    animation: mover 1s infinite alternate;
+}
+
+.service-container:hover .number-icon .icon-2 {
+    background-color: #f89d36;
+    border-radius: 50% !important;
+}
+
+.service-container:hover .number-icon .icon-2 i {
+    color: #ffffff !important;
+}
+
+.service-container:hover .number-icon .number {
+    color: #ffffff;
+    background: #f89d36 !important;
+    border-color: #ffffff !important;
+}
+
+.service-container:hover .content .title {
+    color: #f89d36;
+}
+
+.service-container a:hover,
+.service-container a .title:hover {
+    color: #f89d36 !important;
+}
+
+@-webkit-keyframes mover {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes mover {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+.service-wrapper {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.service-wrapper .icon {
+    width: 60px;
+    height: 60px;
+    line-height: 45px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.service-wrapper .content .title {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    font-weight: 500;
+}
+
+.service-wrapper .big-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0.05;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.service-wrapper:hover {
+    -webkit-box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+    box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+    background: #ffffff;
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    border-color: transparent !important;
+}
+
+.service-wrapper:hover .icon {
+    background: #0062ff !important;
+    color: #ffffff !important;
+}
+
+.service-wrapper:hover .big-icon {
+    z-index: -1;
+    opacity: 0.1;
+    font-size: 160px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card .icon,
+.card .big-icon {
+    flex-shrink: 0;
+}
+
+.col-lg-4,
+.col-md-6,
+.col-12 {
+    margin-bottom: 20px;
+}
+
+.card.service-wrapper {
+    margin: 10px;
+}
+
+
+.text-custom {
+    color: #0062ff !important;
+}
+
+.uim-svg {
+    display: inline-block;
+    height: 1em;
+    vertical-align: -0.125em;
+    font-size: inherit;
+    fill: var(--uim-color, currentColor);
+}
+
+
+/**Pricing section **/
+
+/* Ensure pricing box is flex and centered */
+.pricing-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+/* Center align content */
+.pricing-box .content {
+    text-align: center;
+}
+
+/* Style for price */
+.pricing-plan {
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Button centered */
+.pricing-box .btn {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Rounded background and white text on hover */
+.pricing-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-box:hover h4 {
+    color: #fff;
+    background-color: blue;
+    border-radius: 20px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.pricing-box:hover .pricing-plan h4 {
+    color: #fff;
+}
+
+/* Margin for each pricing box */
+@media (min-width: 992px) {
+    .col-lg-4 {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+.mb-2, .my-2 {
+    margin-bottom: .5rem !important;
+}
+
+p {
+    line-height: 1.7;
+}
