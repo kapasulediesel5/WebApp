@@ -93,6 +93,18 @@ html, body {
     background-color: #f1f1f1;
 }
 
+.fixed-size {
+    height: fit-content;
+    object-fit: cover;
+}
+
+.thumb-size {
+    width: 5px;
+    height: 5px;
+    object-fit: cover;
+}
+
+
 .tab button {
     background-color: inherit;
     float: left;

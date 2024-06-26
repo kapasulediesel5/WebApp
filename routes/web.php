@@ -34,38 +34,9 @@
 		 * Content Routes for handling crud operations
 		 *
 		 */
-		Route::get('/content',[ContentController::class,'index']);
-		//
-		//Route::post ('/content', [ContentController::class,'show']);
-		//
-		//Route::get('/',[ContentController::class,'update']);
-		//
-		//Route::delete('/',[ContentController::class,'delete']);
-		//
-
-		/**
-		 * Package Routes for handling crud operations
-		 *
-		 */
-		Route::get('/packages',[PackageController::class,'index']);
-
-		Route::get('/content/{id}/edit', [ContentController::class, 'edit']);
-		//
-		//Route::get('/',[PackageController::class,'update']);
-		//
-		//Route::put('/',[PackageController::class,'delete']);
-
-		/**
-		 * Service Routes for handling crud operations
-		 *
-		 */
-		Route::get('/services',[ServiceController::class,'index']);
-		//
-		//Route::post ('/', [ServiceController::class,'show']);
-		//
-		//Route::get('/',[ServiceController::class,'update']);
-		//
-		//Route::delete('/',[ServiceController::class,'delete']);
+		Route::resource('contents', ContentController::class);
+		Route::resource('services', ServiceController::class);
+		Route::resource('packages', PackageController::class);
 
 	});
 	

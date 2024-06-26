@@ -20,13 +20,13 @@
         </div>
 
         <div class="col-md-6">
-            <img src="{{ asset('img/p1.jpeg') }}" alt="Service 1 Image" class="img-fluid w-100">
+            <img src="{{ asset('storage/' . $content->image1) }}" alt="Image 1" class="img-fluid w-100 fixed-size">
         </div>
     </div>
 
     <div class="row section2">
         <div class="col-md-6">
-            <img src="{{ asset('img/p1.jpeg') }}" alt="Service 2 Image" class="img-fluid w-100">
+            <img src="{{ asset('storage/' . $content->image2) }}" alt="Image 2" class="img-fluid w-100 fixed-size">
         </div>
         <div class="col-md-6 ">
             <div class="tab">
@@ -115,11 +115,9 @@
                         <div class="col-lg-4 d-flex align-items-stretch">
                             <div class="pricing-box mt-2 d-flex flex-column">
                                 <h4 class="f-20 text-center">{{ $package->name }}</h4>
-                                <div class="content mt-4">
-                                    <p class="text-muted">{{ $package->description }}</p>
-                                </div>
+                                <p class="mt-4 pt-2 text-muted">{{ $package->description }}</p>
                                 <div class="pricing-plan mt-4 pt-2">
-                                    <h4 class="text-muted">$ {{ $package->price }} /mo</h4>
+                                    <h4 class="text-muted"><span class="small-dollar">$</span><span class="plan pl-3 text-dark">{{ $package->price }}</span> <span class="text-muted mb-0">/mo</span></h4>
                                 </div>
                                 <div class="mt-4 pt-3">
                                     <a href="" class="btn btn-primary btn-rounded">Purchase Now</a>
@@ -145,6 +143,5 @@
             </div>
         </div>
     </div>
-
 
 @endsection

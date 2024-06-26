@@ -34,7 +34,8 @@
                                             <td>{{ $service->header }}</td>
                                             <td>{{ $service->description }}</td>
                                             <td>
-                                                <button class="btn btn-warning"> Edit</button>
+                                                <a href="{{ route('services.edit', $service->id) }}"
+                                                   class="btn btn-warning">Edit</a>
                                             </td>
                                         </tr>
                                         </tbody>

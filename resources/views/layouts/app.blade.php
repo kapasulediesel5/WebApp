@@ -17,7 +17,7 @@
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Business</a>
+            <a class="navbar-brand" href="/">Business</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -27,6 +27,11 @@
                     <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     <a class="nav-link" href="">Services</a>
                     <a class="nav-link" href="">Pricing</a>
+                    @auth
+                        <a class="nav-link" href="/contents">Manage Website</a>
+                        <a class="nav-link" href="/logout">Logout</a>
+                    @endauth
+
                 </div>
             </div>
         </div>

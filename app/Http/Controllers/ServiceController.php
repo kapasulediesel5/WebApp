@@ -46,9 +46,9 @@ class ServiceController extends Controller {
 		Service::create( $request->all() );
 
 		return redirect()->route( 'services.index' )->with(
-				'success',
-				'Service created successfully.'
-			);
+			'success',
+			'Service created successfully.'
+		);
 	}
 
 	/**
@@ -60,8 +60,8 @@ class ServiceController extends Controller {
 	 */
 	public function edit( Service $service ) {
 		return view(
-			'services.edit',
-			compact( 'service' )
+			'admin.services.editService',
+			[ 'service' => $service ]
 		);
 	}
 
@@ -76,15 +76,15 @@ class ServiceController extends Controller {
 	public function update( Request $request, Service $service ) {
 		$request->validate( [
 			'header' => 'required|string',
-			'description' => 'nullable|string',
+			'description' => 'required|string',
 		] );
 
 		$service->update( $request->all() );
 
 		return redirect()->route( 'services.index' )->with(
-				'success',
-				'Service updated successfully.'
-			);
+			'success',
+			'Service updated successfully.'
+		);
 	}
 
 	/**
@@ -98,8 +98,8 @@ class ServiceController extends Controller {
 		$service->delete();
 
 		return redirect()->route( 'services.index' )->with(
-				'success',
-				'Service deleted successfully.'
-			);
+			'success',
+			'Service deleted successfully.'
+		);
 	}
 }

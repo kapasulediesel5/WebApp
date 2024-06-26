@@ -16,18 +16,18 @@
 
 
 <div class="container">
-    <h2 class="mt-5">Edit Content</h2>
-    <form id="editForm" action="" method="POST">
+    <h2 class="mt-5">Edit Services</h2>
+    <form id="editForm" action="{{ route('services.update', $service->id) }}" method="POST">
         @csrf
-        @method('POST')
+        @method('PUT')
         <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" name="name" value="">
+            <label for="name">Header</label>
+            <input type="text" class="form-control" id="header" name="header" value="{{ $service->header }}">
             <div class="invalid-feedback"></div>
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea class="form-control" id="description" name="description"></textarea>
+            <textarea class="form-control" id="description" name="description"> {{ $service->description }}</textarea>
             <div class="invalid-feedback"></div>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
@@ -35,8 +35,8 @@
 </div>
 
 <script>
-    $(document).ready(function() {
-        $('#editForm').submit(function(e) {
+    $(document).ready(function () {
+        $('#editForm').submit(function (e) {
             e.preventDefault();
             var formData = {
                 name: $('#name').val(),
@@ -47,15 +47,15 @@
                 url: $(this).attr('action'),
                 type: 'POST',
                 data: formData,
-                success: function(response) {
+                success: function (response) {
                     alert(response.message);
                     window.location.href = "";
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     $('.form-control').removeClass('is-invalid');
                     $('.invalid-feedback').text('');
                     if (xhr.responseJSON.errors) {
-                        $.each(xhr.responseJSON.errors, function(field, messages) {
+                        $.each(xhr.responseJSON.errors, function (field, messages) {
                             $('#' + field).addClass('is-invalid');
                             $('#' + field + ' + .invalid-feedback').text(messages[0]);
                         });
