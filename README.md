@@ -7,7 +7,7 @@ Start Development Server:
 
 Run php artisan serve to start the PHP development server.
 
-Import schema.sql into your database management.
+Import schema.sql into your database management from the root of the project.
 
 Run php artisan serve again to refresh server connections.
 Access Website:
