@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h2>Edit Content</h2>
+        <h2 class="text-center">Edit Content</h2>
         <form action="{{ route('contents.update', $content->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
@@ -16,32 +16,40 @@
                 <textarea class="form-control" id="description" name="description" rows="3"
                           required>{{ $content->description }}</textarea>
             </div>
+            <br>
             <div class="form-group">
                 <label for="image1">Image 1</label>
                 <input type="file" class="form-control-file" id="image1" name="image1"
                        value="old{{ $content->image1 }}">
             </div>
+            <br>
             <div class="form-group">
                 <label for="image2">Image 2</label>
                 <input type="file" class="form-control-file" id="image2" name="image2"
                        value="old{{ $content->image1 }}">
             </div>
+            <br>
             <div class="form-group">
                 <label for="who_we_are">Who We Are</label>
                 <textarea class="form-control" id="who_we_are" name="who_we_are" rows="3"
                           required>{{ $content->who_we_are }}</textarea>
             </div>
+            <br>
             <div class="form-group">
                 <label for="our_vision">Our Vision</label>
                 <textarea class="form-control" id="our_vision" name="our_vision" rows="3"
                           required>{{ $content->our_vision }}</textarea>
             </div>
+            <br>
             <div class="form-group">
                 <label for="our_history">Our History</label>
                 <textarea class="form-control" id="our_history" name="our_history" rows="3"
                           required>{{ $content->our_history }}</textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Update</button>
+            <br>
+            <div class="form-control">
+                <button type="submit" class="btn btn-primary">Update</button>
+            </div>
         </form>
     </div>
     </div>
